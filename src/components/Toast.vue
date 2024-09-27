@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import { useUiStore } from '../stores/UiStore';
+import { useUiStore } from '../stores/uiStore';
 
 const uiStore = useUiStore();
 
