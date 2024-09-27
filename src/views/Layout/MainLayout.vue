@@ -22,7 +22,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useUiStore } from '../../stores/uiStore'; // Import uiStore
-import NavBar from '../../components/NavBar.vue';
+import NavBar from '../../components/Navbar.vue';
 
 const uiStore = useUiStore();
 const windowWidth = ref(window.innerWidth);
