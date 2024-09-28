@@ -1,6 +1,6 @@
 <template>
   <Toast />
-  <router-view></router-view>
+  <router-view class="bg-white"></router-view>
 </template>
 
 <script setup>
