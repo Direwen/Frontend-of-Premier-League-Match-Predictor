@@ -122,6 +122,19 @@ export const useAppStore = defineStore('AppStore', {
       }
     },
 
+    async updateUserData() {
+      const uiStore = useUiStore(); // Access UI store
+      try {
+        let res = await axiosInstance.post('/auth/user', {user_id: this.user.user_id});
+        this.user = res.data.user; // Store user info
+        localStorage.setItem('user', JSON.stringify(res.data.user));
+        return true;
+      } catch (error) {
+        uiStore.showToast('failed to fetch user data.', 'failure');
+        return false;
+      }
+    },
+
     // Fetch the user's predictions
     async getUserPredictions(lastEvaluatedKey = null) {
       const uiStore = useUiStore(); // Access UI store

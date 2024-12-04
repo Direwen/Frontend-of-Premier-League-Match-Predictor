@@ -12,6 +12,7 @@ const appStore = useAppStore();
 // Check authentication when the app loads
 if (appStore.checkAuth()) {
   appStore.evaluateUserScore();
+  appStore.updateUserData();
 }
 
 </script>
